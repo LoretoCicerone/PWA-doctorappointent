@@ -1,0 +1,17 @@
+<div class="card">
+    <div class="card-header">
+        <app-shared-header-crud
+        title="Gestione Dottori"
+        addButtonText="Aggiungi dottore"></app-shared-header-crud>
+    </div>
+    <div class="card-body">
+        <app-shared-table-crud
+        [areRowsSelectable]="true"
+        [tableData]="doctors"
+        [tableColumns]="columns"
+        [isSortable]="true"
+        [isFilterable]="true"
+        [isPageable]="true">   
+        </app-shared-table-crud>
+    </div>
+</div>

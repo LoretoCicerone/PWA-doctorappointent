@@ -1,0 +1,17 @@
+<div class="card">
+    <div class="card-header">
+        <app-shared-header-crud
+        title="Gestione Dipartimenti"
+        addButtonText="Aggiungi dipartimento"></app-shared-header-crud>
+    </div>
+    <div class="card-body">
+        <app-shared-table-crud
+        [areRowsSelectable]="true"
+        [tableData]="departments"
+        [tableColumns]="columns"
+        [isSortable]="true"
+        [isFilterable]="true"
+        [isPageable]="true">   
+        </app-shared-table-crud>
+    </div>
+</div>
