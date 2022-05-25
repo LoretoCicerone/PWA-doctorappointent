@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { DoctorFormComponent } from './components/doctor-form/doctor-form.component';
 import { DoctorRoutingModule } from './doctor-routing.module';
 import { DoctorComponent } from './container/doctor.component';
-import { SharedModule } from '../../shared/shared.module';
+import { SharedModule } from 'shared';
 
 
 

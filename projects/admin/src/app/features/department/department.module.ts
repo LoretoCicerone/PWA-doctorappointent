@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { DepartmentComponent } from './container/department.component';
 import { DepartmentFormComponent } from './components/department-form/department-form.component';
 import { DepartmentRoutingModule } from './department-routing.module';
-import { SharedModule } from '../../shared/shared.module';
+import { SharedModule } from 'shared';
 
 
 
