@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [{
+export const routes: Routes = [{
   path:'',
-  loadChildren: ()=>import('./features/features.module').then(m=>m.FeaturesModule)
+  loadChildren: ()=>import('./features/features.module').then(m=>m.FeaturesModule),
+  pathMatch:'full'
 }];
 
 @NgModule({

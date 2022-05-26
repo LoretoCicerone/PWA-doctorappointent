@@ -4,6 +4,7 @@ import { FeaturesComponent } from './features.component';
 import { FeaturesRoutingModule } from './features-routing.module';
 import { DoctorModule } from './doctor/doctor.module';
 import { DepartmentModule } from './department/department.module';
+import { AppointmentModule } from './appointment/appointment.module';
 
 
 
@@ -15,7 +16,8 @@ import { DepartmentModule } from './department/department.module';
     CommonModule,
     FeaturesRoutingModule,
     DoctorModule,
-    DepartmentModule
+    DepartmentModule,
+    AppointmentModule
   ]
 })
 export class FeaturesModule { }

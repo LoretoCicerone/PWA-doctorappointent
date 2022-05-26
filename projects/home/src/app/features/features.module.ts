@@ -10,7 +10,6 @@ import { FeaturesRoutingModule } from './features-routing.module';
     FeaturesComponent,
   ],
   imports: [
-    CommonModule,
     FeaturesRoutingModule
   ]
 })
