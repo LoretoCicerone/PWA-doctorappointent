@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminComponent } from './admin/admin.component';
 
 const routes: Routes = [{
-  path:'',
-  loadChildren: ()=>import('./features/features.module').then(m=>m.FeaturesModule)
+  path:'admin',
+  loadChildren: ()=> import('./admin/admin.module').then(m=>m.AdminModule)
 }];
 
 @NgModule({

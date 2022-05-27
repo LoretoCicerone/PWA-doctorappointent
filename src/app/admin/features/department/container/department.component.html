@@ -1,0 +1,13 @@
+<div class="card">
+    <div class="card-header">
+        <app-shared-header-crud
+        title="Gestione Dipartimenti"
+        addButtonText="Aggiungi dipartimento"></app-shared-header-crud>
+    </div>
+    <div class="card-body">
+        <app-shared-table-crud
+        [tableContent]="departments"
+        [tableColumns]="columns">   
+        </app-shared-table-crud>
+    </div>
+</div>

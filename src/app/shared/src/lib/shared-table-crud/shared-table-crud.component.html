@@ -1,0 +1,14 @@
+<table class="table table-striped" style="width: 100%;">
+  <thead>
+    <tr>
+      <th *ngFor="let columnHead of tableColumns">{{ columnHead.name }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let columnData of tableContent" class="mt-4 mb-1" (click)="onRowSelect(columnData)">
+      <td *ngFor="let columnHead of tableColumns">
+        {{ columnData[columnHead.dataKey] }}
+      </td>
+    </tr>
+  </tbody>
+</table>
