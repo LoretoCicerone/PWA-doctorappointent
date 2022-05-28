@@ -1,1 +1,71 @@
-<p>doctor-form works!</p>
+<form [formGroup]="doctorForm">
+    <div class="card">
+        <div class="card-header">
+            <app-shared-form-actions></app-shared-form-actions>
+        </div>
+        <div class="card-body">
+            <fieldset>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label for="name">
+                                <span>Nome</span>
+                            </label>
+                            <input type="text" formControlName="name">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label for="email">
+                                <span>Email</span>
+                            </label>
+                            <input type="text" formControlName="email">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label for="phone_number">
+                                <span>Numero di telefono</span>
+                            </label>
+                            <input type="text" formControlName="phone_number">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label for="address">
+                                <span>Indirizzo</span>
+                            </label>
+                            <input type="text" formControlName="address">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label for="department">
+                                <span>Dipartimento</span>
+                            </label>
+                            <input type="text" formControlName="department">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label for="education">
+                                <span>Titolo di studio</span>
+                            </label>
+                            <input type="text" formControlName="education">
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</form>

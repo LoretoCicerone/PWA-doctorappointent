@@ -105,8 +105,7 @@
               "src/styles.scss",
               "node_modules/bootstrap/dist/css/bootstrap-grid.min.css"
             ],
-            "scripts": [
-            ]
+            "scripts": []
           }
         }
       }
@@ -143,5 +142,8 @@
       }
     }
   },
-  "defaultProject": "doctorappointment"
+  "defaultProject": "doctorappointment",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }

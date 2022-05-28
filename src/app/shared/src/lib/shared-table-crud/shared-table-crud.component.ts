@@ -2,6 +2,8 @@ import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angu
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort, Sort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { Observable } from 'rxjs';
+import { IDoctor } from 'src/app/admin/features/doctor/model/IDoctor';
 
 @Component({
   selector: 'app-shared-table-crud',
@@ -12,7 +14,7 @@ export class SharedTableCrudComponent implements OnInit {
 
  
   @Input() tableColumns;
-  @Input() tableContent;
+  @Input() tableContent : Observable<any>;
   @Output() rowSelectEmitter : EventEmitter<any> = new EventEmitter<any>();
 
   constructor() {}

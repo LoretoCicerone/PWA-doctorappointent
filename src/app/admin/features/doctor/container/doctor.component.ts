@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { map, Observable } from 'rxjs';
+import { DoctorFacadeService } from '../doctor-facade.service';
 import { IDoctor } from '../model/IDoctor';
 
 @Component({
@@ -7,17 +9,18 @@ import { IDoctor } from '../model/IDoctor';
   styleUrls: ['./doctor.component.scss']
 })
 export class DoctorComponent implements OnInit {
-
-  doctors: IDoctor[] = [{
-    id: '1', address: 'via', department: 'dipartimento', education: 'ed', email: 'email@email', name: 'name', phone_number: '2456887653'
-  },
-  {
-    id: '2', address: 'via dal', department: 'departe', education: 'a ed', email: 'loretoemail', name: 'Loreto', phone_number: '568634643'
-  }]
+ 
+  doctors$ = this.doctorFacade.doctors$;
+  isLoadingTable$ = this.doctorFacade.isLoadingTable$;
+  showForm$ = this.doctorFacade.showForm$;
+  currentRowObject = this.doctorFacade.currentRowObject$;
+  
   columns: { name: string, dataKey: string, position?: 'right' | 'left', display: string, isSortable: boolean }[];
-  constructor() { }
+
+  constructor(private doctorFacade : DoctorFacadeService) { }
 
   ngOnInit(): void {
+    this.doctorFacade.loadDoctors();
     this.columns = [
       { dataKey: 'name', name: 'Nome', display: 'table-cell', isSortable: true },
       { dataKey: 'email', name: 'Email', display: 'table-cell', isSortable: true },
@@ -29,7 +32,7 @@ export class DoctorComponent implements OnInit {
   }
 
   setCurrentObject(doctor: IDoctor) {
-    console.log(doctor);
+    this.doctorFacade.setCurrentObject(doctor);
   }
 
 }

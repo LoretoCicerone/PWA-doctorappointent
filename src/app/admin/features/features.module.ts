@@ -5,6 +5,7 @@ import { FeaturesRoutingModule } from './features-routing.module';
 import { DoctorModule } from './doctor/doctor.module';
 import { DepartmentModule } from './department/department.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularSplitModule } from 'angular-split';
 
 
 
@@ -16,6 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CommonModule,
     FeaturesRoutingModule,
     DoctorModule,
+    AngularSplitModule,
     DepartmentModule
   ]
 })

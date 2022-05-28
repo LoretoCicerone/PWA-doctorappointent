@@ -12,4 +12,8 @@ export class SharedFormActionsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  closeForm(event){
+    
+  }
+
 }
