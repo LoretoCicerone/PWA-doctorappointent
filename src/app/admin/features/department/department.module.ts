@@ -4,6 +4,12 @@ import { DepartmentComponent } from './container/department.component';
 import { DepartmentFormComponent } from './components/department-form/department-form.component';
 import { DepartmentRoutingModule } from './department-routing.module';
 import { SharedModule } from 'src/app/shared/src/lib/shared.module';
+import * as fromDepartments from './store/department.reducer';
+import { AngularSplitModule } from 'angular-split';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EffectsModule } from '@ngrx/effects';
+import { DepartmentEffects } from './store/department.effects';
+import { StoreModule } from '@ngrx/store';
 
 
 
@@ -15,7 +21,12 @@ import { SharedModule } from 'src/app/shared/src/lib/shared.module';
   imports: [
     CommonModule,
     DepartmentRoutingModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule,
+    FormsModule,
+    AngularSplitModule,
+    StoreModule.forFeature(fromDepartments.departmentFeatureKey, fromDepartments.reducer),
+    EffectsModule.forFeature([DepartmentEffects])
   ]
 })
 export class DepartmentModule { }

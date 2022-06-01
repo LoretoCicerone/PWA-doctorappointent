@@ -6,63 +6,51 @@
         <div class="card-body">
             <fieldset>
                 <div class="row">
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label for="name">
-                                <span>Nome</span>
-                            </label>
-                            <input type="text" formControlName="name">
-                        </div>
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text"
+                            [class]="doctorForm.get('name').errors?.required ? 'form-control is-invalid':'form-control is-valid'"
+                            formControlName="name">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label for="email">
-                                <span>Email</span>
-                            </label>
-                            <input type="text" formControlName="email">
-                        </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email"
+                            [class]="doctorForm.get('email').errors?.required ? 'form-control is-invalid':'form-control is-valid'"
+                            formControlName="email">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label for="phone_number">
-                                <span>Numero di telefono</span>
-                            </label>
-                            <input type="text" formControlName="phone_number">
-                        </div>
+                    <div class="mb-3">
+                        <label for="phone_number" class="form-label">Numero di telefono</label>
+                        <input type="text"
+                            [class]="doctorForm.get('phone_number').errors?.required ? 'form-control is-invalid':'form-control is-valid'"
+                            formControlName="phone_number">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label for="address">
-                                <span>Indirizzo</span>
-                            </label>
-                            <input type="text" formControlName="address">
-                        </div>
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Indirizoo</label>
+                        <input type="text"
+                            [class]="doctorForm.get('address').errors?.required ? 'form-control is-invalid':'form-control is-valid'"
+                            formControlName="address">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label for="department">
-                                <span>Dipartimento</span>
-                            </label>
-                            <input type="text" formControlName="department">
-                        </div>
+                    <div class="mb-3">
+                        <label for="department" class="form-label">Dipartimento</label>
+                        <input type="text"
+                            [class]="doctorForm.get('department').errors?.required ? 'form-control is-invalid':'form-control is-valid'"
+                            formControlName="department">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <label for="education">
-                                <span>Titolo di studio</span>
-                            </label>
-                            <input type="text" formControlName="education">
-                        </div>
+                    <div class="mb-3">
+                        <label for="education" class="form-label">Titolo di studio</label>
+                        <input type="text"
+                            [class]="doctorForm.get('education').errors?.required ? 'form-control is-invalid':'form-control is-valid'"
+                            formControlName="education">
                     </div>
                 </div>
             </fieldset>
