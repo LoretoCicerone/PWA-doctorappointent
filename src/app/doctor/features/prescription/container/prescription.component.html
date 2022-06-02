@@ -1,0 +1,24 @@
+<as-split unit="percent">
+    <as-split-area [size]="70" [minSize]="0">
+        <div class="card">
+            <div class="card-header">
+                <app-shared-header-crud title="Gestione Prescrizioni">
+                </app-shared-header-crud>
+            </div>
+            <div class="card-body">
+                <div class="text-center" *ngIf="isLoadingTable$ | async">
+                    <div class="spinner-border" role="status">
+                    </div>
+                </div>
+                <app-prescription-list [tableColumns]="columns"
+                [tableContent]="prescriptions$" (rowSelectEmitter)="setCurrentObject($event)"></app-prescription-list>
+            </div>
+        </div>
+    </as-split-area>
+
+    <as-split-area [size]="50" *ngIf="showForm$ | async">
+       <app-prescription-form [currentPrescriptionRow]="currentRowObject | async">
+            
+        </app-prescription-form>>
+    </as-split-area>
+</as-split>

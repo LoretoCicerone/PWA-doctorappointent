@@ -1,0 +1,63 @@
+<form [formGroup]="precriptionForm">
+    <div class="card">
+        <div class="card-header">
+            <app-shared-form-actions></app-shared-form-actions>
+        </div>
+        <div class="card-body">
+            <fieldset>
+                <div class="row">
+                    <div class="mb-3">
+                        <label for="patient" class="form-label">Nome paziente</label>
+                        <input type="text" class="form-control" formControlName="patient">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="mb-3">
+                        <label for="patient_email" class="form-label">Email</label>
+                        <input type="text" class="form-control" formControlName="patient_email">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="mb-3">
+                        <label for="pathology" class="form-label">Patologia</label>
+                        <input type="text"
+                            [class]="precriptionForm.get('pathology').errors?.required ? 'form-control is-invalid':'form-control is-valid'"
+                            formControlName="pathology">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="mb-3">
+                        <label for="symptoms" class="form-label">Sintomi</label>
+                        <textarea
+                            [class]="precriptionForm.get('symptoms').errors?.required ? 'form-control is-invalid':'form-control is-valid'"
+                            formControlName="symptoms"> </textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="mb-3">
+                        <label for="medicine" class="form-label">Medicina prescritta</label>
+                        <textarea
+                            [class]="precriptionForm.get('medicine').errors?.required ? 'form-control is-invalid':'form-control is-valid'"
+                            formControlName="medicine"> </textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="mb-3">
+                        <label for="procedure" class="form-label">Procedura di utilizzo</label>
+                        <textarea
+                            [class]="precriptionForm.get('procedure').errors?.required ? 'form-control is-invalid':'form-control is-valid'"
+                            formControlName="procedure"> </textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="mb-3">
+                        <label for="feedback" class="form-label">Feedback</label>
+                        <input type="text"
+                            [class]="precriptionForm.get('feedback').errors?.required ? 'form-control is-invalid':'form-control is-valid'"
+                            formControlName="feedback">
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</form>

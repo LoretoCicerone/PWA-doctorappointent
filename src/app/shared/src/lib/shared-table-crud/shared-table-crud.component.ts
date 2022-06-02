@@ -14,7 +14,7 @@ export class SharedTableCrudComponent implements OnInit {
 
  
   @Input() tableColumns;
-  @Input() tableContent : Observable<any>;
+  @Input() tableContent;
   @Output() rowSelectEmitter : EventEmitter<any> = new EventEmitter<any>();
 
   constructor() {}

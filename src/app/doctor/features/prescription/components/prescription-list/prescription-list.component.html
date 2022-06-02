@@ -1,0 +1,21 @@
+<table class="table table-striped" style="width: 100%;">
+  <thead>
+    <tr class="head">
+      <th *ngFor="let columnHead of tableColumns">
+        {{ columnHead.name }}
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let columnData of (tableContent | async)" class="body" (click)="onRowSelect(columnData)">
+      <td *ngFor="let columnHead of tableColumns">
+        <div *ngIf="columnHead.dataKey !=='patient'">
+          {{ columnData[columnHead.dataKey] }}
+        </div>
+        <div *ngIf="columnHead.dataKey ==='patient'">
+          {{ columnData[columnHead.dataKey].name}}
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
