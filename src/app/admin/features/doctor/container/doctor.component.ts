@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { map, Observable, of } from 'rxjs';
 import { DoctorFacadeService } from '../doctor-facade.service';
 import { IDoctor } from '../model/IDoctor';
 
@@ -9,15 +9,15 @@ import { IDoctor } from '../model/IDoctor';
   styleUrls: ['./doctor.component.scss']
 })
 export class DoctorComponent implements OnInit {
- 
+
   doctors$ = this.doctorFacade.doctors$;
   isLoadingTable$ = this.doctorFacade.isLoadingTable$;
   showForm$ = this.doctorFacade.showForm$;
   currentRowObject = this.doctorFacade.currentRowObject$;
-  
+
   columns: { name: string, dataKey: string, position?: 'right' | 'left', display: string, isSortable: boolean }[];
 
-  constructor(private doctorFacade : DoctorFacadeService) { }
+  constructor(private doctorFacade: DoctorFacadeService) { }
 
   ngOnInit(): void {
     this.doctorFacade.loadDoctors();
@@ -29,6 +29,21 @@ export class DoctorComponent implements OnInit {
       { dataKey: 'department', name: 'Dipartimento', display: 'table-cell', isSortable: true },
       { dataKey: 'education', name: 'Titolo di studio', display: 'table-cell', isSortable: true },
     ]
+    this.currentRowObject = this.doctorFacade.currentRowObject$.pipe(map((doctor) => doctor ? doctor : this.addNewRow()));
+  }
+
+  addNewRow(): IDoctor {
+    const newDoctor: IDoctor = {
+      id: null,
+      address: '',
+      department: '',
+      education: '',
+      email: '',
+      name: '',
+      phone_number: '',
+    }
+    this.doctorFacade.buildNewRow();
+    return newDoctor;
   }
 
   setCurrentObject(doctor: IDoctor) {

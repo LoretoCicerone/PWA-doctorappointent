@@ -1,11 +1,10 @@
 import { IDoctor } from "../../doctor/model/IDoctor";
+import { IPatient } from "../../patient/model/IPatient";
 
 export interface IAppointment{
+    id: string;
     appointmentDate : Date;
-    patient: string;
-    email: string;
-    phone_number: string;
-    gender : string;
     appointmentTime: string;
+    patient: IPatient;
     doctorBooked: IDoctor;
 }

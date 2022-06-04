@@ -35,9 +35,9 @@ const DoctorReducer = createReducer(
   // on(CalendarActions.editSelectedRow, (state, action) => {
   //   return { ...state, selectedRowId: action.rowId, showForm: true, isEditMode: true, formDisabled: true };
   // }),
-  // on(CalendarActions.newRow, (state, action) => {
-  //   return { ...state, selectedRowId: 'new', showForm: true, isEditMode: false };
-  // }),
+  on(DoctorActions.newRow, (state, action) => {
+    return { ...state, showForm: true, isEditMode: false };
+  }),
   // on(CalendarActions.closeForm, (state, action) => {
   //   return { ...state, showForm: false, formDisabled: false };
   // }),

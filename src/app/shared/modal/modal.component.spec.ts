@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SharedComponent } from './shared.component';
+import { ModalComponent } from './modal.component';
 
-describe('SharedComponent', () => {
-  let component: SharedComponent;
-  let fixture: ComponentFixture<SharedComponent>;
+describe('ModalComponent', () => {
+  let component: ModalComponent;
+  let fixture: ComponentFixture<ModalComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SharedComponent ]
+      declarations: [ ModalComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SharedComponent);
+    fixture = TestBed.createComponent(ModalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,7 +1,7 @@
 <form [formGroup]="doctorForm">
     <div class="card">
         <div class="card-header">
-            <app-shared-form-actions></app-shared-form-actions>
+            <app-shared-form-actions [isFormInvalid]="doctorForm.invalid"></app-shared-form-actions>
         </div>
         <div class="card-body">
             <fieldset>

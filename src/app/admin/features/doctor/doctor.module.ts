@@ -4,7 +4,7 @@ import { DoctorFormComponent } from './components/doctor-form/doctor-form.compon
 import { DoctorRoutingModule } from './doctor-routing.module';
 import * as fromDoctors from './store/doctor.reducer';
 import { DoctorComponent } from './container/doctor.component';
-import { SharedModule } from 'src/app/shared/src/lib/shared.module';
+import { SharedModule } from 'src/app/shared/shared.module';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { DoctorEffects } from './store/doctor.effects';

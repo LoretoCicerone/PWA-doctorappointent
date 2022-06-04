@@ -4,7 +4,8 @@ import * as fromDoctors from './store/doctor.reducer';
 
 import {
   loadDoctors,
-  setCurrentObject
+  setCurrentObject,
+  newRow
 } from './store/doctor.actions';
 
 import{
@@ -38,5 +39,9 @@ export class DoctorFacadeService {
 
    public setCurrentObject(doctorRowSelected : IDoctor){
      this.store.dispatch(setCurrentObject({doctor:doctorRowSelected}));
+   }
+
+   buildNewRow(){
+    this.store.dispatch(newRow());
    }
 }

@@ -8,7 +8,7 @@ import { PrescriptionEffects } from './store/prescription.effects';
 import { PrescriptionRoutingModule } from './prescription-routing.module';
 import { StoreModule } from '@ngrx/store';
 import * as fromPrescriptions from './store/prescription.reducer';
-import { SharedModule } from 'shared';
+import { SharedModule } from 'src/app/shared/shared.module';
 import { PrescriptionListComponent } from './components/prescription-list/prescription-list.component';
 import { AngularSplitModule } from 'angular-split';
 

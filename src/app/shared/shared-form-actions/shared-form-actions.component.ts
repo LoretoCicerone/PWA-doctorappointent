@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import {Modal} from 'bootstrap';
 
 @Component({
   selector: 'app-shared-form-actions',
@@ -7,13 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SharedFormActionsComponent implements OnInit {
 
+  @Input() isFormInvalid;
+  displayStyle = "none";
   constructor() { }
 
   ngOnInit(): void {
   }
 
   closeForm(event){
-    
+    this.displayStyle = "block";
   }
 
 }

@@ -18,3 +18,8 @@ export const setCurrentObject = createAction(
   '[Doctor] Set Current Object',
   props<{doctor : IDoctor}>()
 )
+
+export const newRow = createAction(
+  '[Doctor] New Row'
+)
+

@@ -1,5 +1,5 @@
 import { IDoctor } from "src/app/admin/features/doctor/model/IDoctor";
-import { IPatient } from "./IPatient";
+import { IPatient } from "../../../../admin/features/patient/model/IPatient";
 
 export interface IPrescription {
     id: string

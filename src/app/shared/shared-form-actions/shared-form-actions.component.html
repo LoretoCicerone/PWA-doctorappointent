@@ -1,0 +1,43 @@
+<div class="d-flex justify-content-between pb-3 crud-card-header">
+
+  <div class="p-2">
+    <div class="d-flex align-items-center flex-row">
+      <div class="p-2">
+        <button type="button" class="btn btn-danger" (click)="closeForm($event)" data-toggle="modal"
+          data-target="#exampleModal">
+          <i class="bi bi-x-circle"></i>
+          Chiudi
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true" [ngStyle]="{'display':displayStyle}">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Chiudi form</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Sei sicuro di voler chiudere la form? Tutti i dati andranno persi.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
+          <button type="button" class="btn btn-primary">Chiudi</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-2">
+    <div class="input-group">
+      <button type="button" class="btn btn-success" [disabled]="isFormInvalid">
+        <i class="bi bi-file-earmark-check"></i>
+        Salva
+      </button>
+
+    </div>
+
+  </div>

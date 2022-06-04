@@ -2,8 +2,7 @@
     <as-split-area [size]="70" [minSize]="0">
         <div class="card">
             <div class="card-header">
-                <app-shared-header-crud title="Gestione Dottori" addButtonText="Aggiungi dottore"
-                (add)="addNewRow()">
+                <app-shared-header-crud title="Lista pazienti">
                 </app-shared-header-crud>
             </div>
             <div class="card-body">
@@ -11,16 +10,10 @@
                     <div class="spinner-border" role="status">
                     </div>
                 </div>
-                <app-shared-table-crud *ngIf="!(isLoadingTable$ | async)" [tableContent]="doctors$"
-                    [tableColumns]="columns" (rowSelectEmitter)="setCurrentObject($event)">
+                <app-shared-table-crud *ngIf="!(isLoadingTable$ | async)" [tableContent]="patients$"
+                    [tableColumns]="columns">
                 </app-shared-table-crud>
             </div>
         </div>
-    </as-split-area>
-
-    <as-split-area [size]="50" *ngIf="showForm$ | async">
-        <app-doctor-form [currentDoctorRow]="currentRowObject | async">
-            
-        </app-doctor-form>
     </as-split-area>
 </as-split>
