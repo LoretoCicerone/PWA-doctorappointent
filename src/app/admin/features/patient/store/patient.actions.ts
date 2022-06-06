@@ -1,15 +1,20 @@
 import { createAction, props } from '@ngrx/store';
+import { IPatient } from '../model/IPatient';
 
-export const patientPatients = createAction(
-  '[Patient] Patient Patients'
+export const loadPatients = createAction(
+  '[Patient] Load Patients'
 );
 
-export const patientPatientsSuccess = createAction(
-  '[Patient] Patient Patients Success',
-  props<{ data: any }>()
+export const loadPatientsSuccess = createAction(
+  '[Patient] Load Patients Success',
+  props<{ patients: IPatient[] }>()
 );
 
-export const patientPatientsFailure = createAction(
-  '[Patient] Patient Patients Failure',
-  props<{ error: any }>()
+export const loadPatientsFailure = createAction(
+  '[Patient] Load Patients Failure'
 );
+
+export const setCurrentObject = createAction(
+  '[Patient] Set Current Object',
+  props<{patient : IPatient}>()
+)

@@ -47,6 +47,7 @@ export class DoctorComponent implements OnInit {
   }
 
   setCurrentObject(doctor: IDoctor) {
+    console.log(doctor);
     this.doctorFacade.setCurrentObject(doctor);
   }
 

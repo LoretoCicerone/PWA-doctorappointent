@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EffectsModule } from '@ngrx/effects';
 import { DepartmentEffects } from './store/department.effects';
 import { StoreModule } from '@ngrx/store';
+import { MatCardModule } from '@angular/material/card';
 
 
 
@@ -24,6 +25,7 @@ import { StoreModule } from '@ngrx/store';
     SharedModule,
     ReactiveFormsModule,
     FormsModule,
+    MatCardModule,
     AngularSplitModule,
     StoreModule.forFeature(fromDepartments.departmentFeatureKey, fromDepartments.reducer),
     EffectsModule.forFeature([DepartmentEffects])

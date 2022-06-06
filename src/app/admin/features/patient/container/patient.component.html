@@ -1,19 +1,21 @@
 <as-split unit="percent">
     <as-split-area [size]="70" [minSize]="0">
-        <div class="card">
-            <div class="card-header">
+        <mat-card>
+            <mat-card-title>
                 <app-shared-header-crud title="Lista pazienti">
                 </app-shared-header-crud>
-            </div>
-            <div class="card-body">
+            </mat-card-title>
+            <mat-card-content>
                 <div class="text-center" *ngIf="isLoadingTable$ | async">
                     <div class="spinner-border" role="status">
                     </div>
                 </div>
                 <app-shared-table-crud *ngIf="!(isLoadingTable$ | async)" [tableContent]="patients$"
-                    [tableColumns]="columns">
+                [isFilterable]="true"
+                [isPageable]="true"
+                    [tableColumns]="columns" (rowSelectEmitter)="setCurrentObject($event)">
                 </app-shared-table-crud>
-            </div>
-        </div>
+            </mat-card-content>
+        </mat-card>
     </as-split-area>
 </as-split>

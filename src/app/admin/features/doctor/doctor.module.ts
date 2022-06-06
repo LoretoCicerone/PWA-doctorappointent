@@ -10,7 +10,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { DoctorEffects } from './store/doctor.effects';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularSplitModule } from 'angular-split';
-
+import {MatCardModule} from '@angular/material/card';
 @NgModule({
   declarations: [
     DoctorFormComponent,
@@ -21,6 +21,7 @@ import { AngularSplitModule } from 'angular-split';
     SharedModule,
     FormsModule,
     AngularSplitModule,
+    MatCardModule,
     ReactiveFormsModule,
     DoctorRoutingModule,
     StoreModule.forFeature(fromDoctors.doctorFeatureKey, fromDoctors.reducer),
