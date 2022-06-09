@@ -7,50 +7,50 @@
             <fieldset>
                 <div class="row">
                     <div class="mb-3">
-                        <label for="nome" class="form-label">Nome</label>
-                        <input type="text"
-                            [class]="doctorForm.get('name').errors?.required ? 'form-control is-invalid':'form-control is-valid'"
-                            formControlName="name">
+                        <mat-form-field class="example-full-width" style="width: 100%;" appearance="fill">
+                            <mat-label>Nome </mat-label>
+                            <input type="text" matInput formControlName="name">
+                        </mat-form-field>
                     </div>
                 </div>
                 <div class="row">
                     <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email"
-                            [class]="doctorForm.get('email').errors?.required ? 'form-control is-invalid':'form-control is-valid'"
-                            formControlName="email">
+                        <mat-form-field class="example-full-width" style="width: 100%;" appearance="fill">
+                            <mat-label>Email</mat-label>
+                            <input type="email" matInput formControlName="email">
+                        </mat-form-field>
                     </div>
                 </div>
                 <div class="row">
                     <div class="mb-3">
-                        <label for="phone_number" class="form-label">Numero di telefono</label>
-                        <input type="text"
-                            [class]="doctorForm.get('phone_number').errors?.required ? 'form-control is-invalid':'form-control is-valid'"
-                            formControlName="phone_number">
+                        <mat-form-field class="example-full-width" style="width: 100%;" appearance="fill">
+                            <mat-label>Numero di telefono</mat-label>
+                            <input type="text" matInput formControlName="phone_number">
+                        </mat-form-field>
                     </div>
                 </div>
                 <div class="row">
                     <div class="mb-3">
-                        <label for="address" class="form-label">Indirizoo</label>
-                        <input type="text"
-                            [class]="doctorForm.get('address').errors?.required ? 'form-control is-invalid':'form-control is-valid'"
-                            formControlName="address">
+                        <mat-form-field class="example-full-width" style="width: 100%;" appearance="fill">
+                            <mat-label>Indirizzo</mat-label>
+                            <input type="text" matInput formControlName="address">
+                        </mat-form-field>
                     </div>
                 </div>
                 <div class="row">
                     <div class="mb-3">
-                        <label for="department" class="form-label">Dipartimento</label>
-                        <input type="text"
-                            [class]="doctorForm.get('department').errors?.required ? 'form-control is-invalid':'form-control is-valid'"
-                            formControlName="department">
+                        <mat-form-field class="example-full-width" style="width: 100%;" appearance="fill">
+                            <mat-label>Dipartimento</mat-label>
+                            <input type="text" matInput formControlName="department">
+                        </mat-form-field>
                     </div>
                 </div>
                 <div class="row">
                     <div class="mb-3">
-                        <label for="education" class="form-label">Titolo di studio</label>
-                        <input type="text"
-                            [class]="doctorForm.get('education').errors?.required ? 'form-control is-invalid':'form-control is-valid'"
-                            formControlName="education">
+                        <mat-form-field class="example-full-width" style="width: 100%;" appearance="fill">
+                            <mat-label>Titolo di studio</mat-label>
+                            <input type="text" matInput formControlName="education">
+                        </mat-form-field>
                     </div>
                 </div>
             </fieldset>

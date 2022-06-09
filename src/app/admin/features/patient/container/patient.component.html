@@ -6,14 +6,12 @@
                 </app-shared-header-crud>
             </mat-card-title>
             <mat-card-content>
-                <div class="text-center" *ngIf="isLoadingTable$ | async">
-                    <div class="spinner-border" role="status">
-                    </div>
+                <div class="d-flex justify-content-center">
+                <mat-spinner *ngIf="isLoadingTable$ | async"></mat-spinner>
                 </div>
                 <app-shared-table-crud *ngIf="!(isLoadingTable$ | async)" [tableContent]="patients$"
-                [isFilterable]="true"
-                [isPageable]="true"
-                    [tableColumns]="columns" (rowSelectEmitter)="setCurrentObject($event)">
+                    [isFilterable]="true" [isPageable]="true" [tableColumns]="columns"
+                    (rowSelectEmitter)="setCurrentObject($event)">
                 </app-shared-table-crud>
             </mat-card-content>
         </mat-card>

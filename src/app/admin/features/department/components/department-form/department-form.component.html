@@ -6,8 +6,10 @@
         <div class="card-body">
             <fieldset>
                 <div class="mb-3">
-                    <label for="name" class="form-label">Nome dipartimento</label>
-                    <input type="text" [class]="departmentForm.get('name').errors?.required ? 'form-control is-invalid':'form-control is-valid'" formControlName="name">
+                <mat-form-field class="example-full-width" style="width: 100%;" appearance="fill">
+                    <mat-label>Nome Dipartimento</mat-label>
+                    <input type="text" matInput formControlName="name">
+                </mat-form-field>
                 </div>
             </fieldset>
         </div>

@@ -12,6 +12,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { PrescriptionListComponent } from './components/prescription-list/prescription-list.component';
 import { AngularSplitModule } from 'angular-split';
 import { MatCardModule } from '@angular/material/card';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatInputModule } from '@angular/material/input';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { MatCardModule } from '@angular/material/card';
     ReactiveFormsModule,
     FormsModule,
     AngularSplitModule,
+    MatInputModule,
     SharedModule,
+    MatProgressSpinnerModule,
     MatCardModule,
     PrescriptionRoutingModule,
     StoreModule.forFeature(fromPrescriptions.prescriptionFeatureKey, fromPrescriptions.reducer),

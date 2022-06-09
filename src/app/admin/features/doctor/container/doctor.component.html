@@ -1,15 +1,13 @@
 <as-split unit="percent">
     <as-split-area [size]="70" [minSize]="0">
         <mat-card>
-                <mat-card-title>
-                    <app-shared-header-crud title="Gestione Dottori" addButtonText="Aggiungi dottore"
-                        (add)="addNewRow()">
-                    </app-shared-header-crud>
-                </mat-card-title>
+            <mat-card-title>
+                <app-shared-header-crud title="Gestione Dottori" addButtonText="Aggiungi dottore" (add)="addNewRow()">
+                </app-shared-header-crud>
+            </mat-card-title>
             <mat-card-content>
-                <div class="text-center" *ngIf="isLoadingTable$ | async">
-                    <div class="spinner-border" role="status">
-                    </div>
+                <div class="d-flex justify-content-center" *ngIf="isLoadingTable$ | async">
+                    <mat-spinner ></mat-spinner>
                 </div>
                 <app-shared-table-crud *ngIf="!(isLoadingTable$ | async)" [tableContent]="doctors$"
                     [tableColumns]="columns" (rowSelectEmitter)="setCurrentObject($event)">

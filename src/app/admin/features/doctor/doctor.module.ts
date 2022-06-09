@@ -11,6 +11,8 @@ import { DoctorEffects } from './store/doctor.effects';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularSplitModule } from 'angular-split';
 import {MatCardModule} from '@angular/material/card';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatInputModule } from '@angular/material/input';
 @NgModule({
   declarations: [
     DoctorFormComponent,
@@ -22,6 +24,8 @@ import {MatCardModule} from '@angular/material/card';
     FormsModule,
     AngularSplitModule,
     MatCardModule,
+    MatInputModule,
+    MatProgressSpinnerModule,
     ReactiveFormsModule,
     DoctorRoutingModule,
     StoreModule.forFeature(fromDoctors.doctorFeatureKey, fromDoctors.reducer),

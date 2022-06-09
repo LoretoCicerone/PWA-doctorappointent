@@ -6,9 +6,8 @@
                 </app-shared-header-crud>
             </mat-card-title>
             <mat-card-content>
-                <div class="text-center" *ngIf="isLoadingTable$ | async">
-                    <div class="spinner-border" role="status">
-                    </div>
+                <div class="d-flex justify-content-center">
+                    <mat-spinner *ngIf="isLoadingTable$ | async"></mat-spinner>
                 </div>
                 <app-shared-table-crud *ngIf="!(isLoadingTable$ | async)" [tableContent]="departments$"
                     [tableColumns]="columns" (rowSelectEmitter)="setCurrentObject($event)">
@@ -18,6 +17,6 @@
     </as-split-area>
 
     <as-split-area [size]="50" *ngIf="showForm$ | async">
-       <app-department-form [currentDepartmentRow]="currentRowObject | async"></app-department-form>
+        <app-department-form [currentDepartmentRow]="currentRowObject | async"></app-department-form>
     </as-split-area>
 </as-split>

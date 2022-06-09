@@ -7,54 +7,58 @@
             <fieldset>
                 <div class="row">
                     <div class="mb-3">
-                        <label for="patient" class="form-label">Nome paziente</label>
-                        <input type="text" class="form-control" formControlName="patient">
+                        <mat-form-field class="example-full-width" style="width: 100%;" appearance="fill">
+                            <mat-label>Nome paziente</mat-label>
+                            <input type="text" matInput formControlName="patient">
+                        </mat-form-field>
                     </div>
                 </div>
                 <div class="row">
                     <div class="mb-3">
-                        <label for="patient_email" class="form-label">Email</label>
-                        <input type="text" class="form-control" formControlName="patient_email">
+                        <mat-form-field class="example-full-width" style="width: 100%;" appearance="fill">
+                            <mat-label>Email</mat-label>
+                            <input type="email" matInput formControlName="patient_email">
+                        </mat-form-field>
                     </div>
                 </div>
                 <div class="row">
                     <div class="mb-3">
-                        <label for="pathology" class="form-label">Patologia</label>
-                        <input type="text"
-                            [class]="precriptionForm.get('pathology').errors?.required ? 'form-control is-invalid':'form-control is-valid'"
-                            formControlName="pathology">
+                        <mat-form-field class="example-full-width" style="width: 100%;" appearance="fill">
+                            <mat-label>Patologia</mat-label>
+                            <input type="text" matInput formControlName="pathology">
+                        </mat-form-field>
                     </div>
                 </div>
                 <div class="row">
                     <div class="mb-3">
-                        <label for="symptoms" class="form-label">Sintomi</label>
-                        <textarea
-                            [class]="precriptionForm.get('symptoms').errors?.required ? 'form-control is-invalid':'form-control is-valid'"
-                            formControlName="symptoms"> </textarea>
+                        <mat-form-field class="example-full-width" style="width: 100%;" appearance="fill">
+                            <mat-label>Sintomi</mat-label>
+                            <textarea matInput formControlName="symptoms"> </textarea>
+                        </mat-form-field>
                     </div>
                 </div>
                 <div class="row">
                     <div class="mb-3">
-                        <label for="medicine" class="form-label">Medicina prescritta</label>
-                        <textarea
-                            [class]="precriptionForm.get('medicine').errors?.required ? 'form-control is-invalid':'form-control is-valid'"
-                            formControlName="medicine"> </textarea>
+                        <mat-form-field class="example-full-width" style="width: 100%;" appearance="fill">
+                            <mat-label>Medicine </mat-label>
+                            <textarea matInput formControlName="medicine"> </textarea>
+                        </mat-form-field>
                     </div>
                 </div>
                 <div class="row">
                     <div class="mb-3">
-                        <label for="procedure" class="form-label">Procedura di utilizzo</label>
-                        <textarea
-                            [class]="precriptionForm.get('procedure').errors?.required ? 'form-control is-invalid':'form-control is-valid'"
-                            formControlName="procedure"> </textarea>
+                        <mat-form-field class="example-full-width" style="width: 100%;" appearance="fill">
+                            <mat-label>Procedura di utilizzo</mat-label>
+                            <textarea matInput formControlName="procedure"> </textarea>
+                        </mat-form-field>
                     </div>
                 </div>
                 <div class="row">
                     <div class="mb-3">
-                        <label for="feedback" class="form-label">Feedback</label>
-                        <input type="text"
-                            [class]="precriptionForm.get('feedback').errors?.required ? 'form-control is-invalid':'form-control is-valid'"
-                            formControlName="feedback">
+                        <mat-form-field class="example-full-width" style="width: 100%;" appearance="fill">
+                            <mat-label>Feedback</mat-label>
+                            <textarea matInput formControlName="feedback"> </textarea>
+                        </mat-form-field>
                     </div>
                 </div>
             </fieldset>

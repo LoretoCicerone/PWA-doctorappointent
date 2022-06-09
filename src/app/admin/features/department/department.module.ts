@@ -11,7 +11,8 @@ import { EffectsModule } from '@ngrx/effects';
 import { DepartmentEffects } from './store/department.effects';
 import { StoreModule } from '@ngrx/store';
 import { MatCardModule } from '@angular/material/card';
-
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatInputModule} from '@angular/material/input';
 
 
 @NgModule({
@@ -23,8 +24,10 @@ import { MatCardModule } from '@angular/material/card';
     CommonModule,
     DepartmentRoutingModule,
     SharedModule,
+    MatInputModule,
     ReactiveFormsModule,
     FormsModule,
+    MatProgressSpinnerModule,
     MatCardModule,
     AngularSplitModule,
     StoreModule.forFeature(fromDepartments.departmentFeatureKey, fromDepartments.reducer),

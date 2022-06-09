@@ -9,6 +9,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import { PatientRoutingModule } from './patient-routing.module';
 import { MatCardModule } from '@angular/material/card';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { MatCardModule } from '@angular/material/card';
     SharedModule,
     MatCardModule,
     PatientRoutingModule,
+    MatProgressSpinnerModule,
     StoreModule.forFeature(fromPatients.patientFeatureKey, fromPatients.reducer),
     EffectsModule.forFeature([PatientEffects])
   ]
