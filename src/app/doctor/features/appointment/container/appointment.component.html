@@ -1,1 +1,23 @@
-<p>appointment works!</p>
+<as-split unit="percent">
+    <as-split-area [size]="70" [minSize]="0">
+        <mat-card>
+            <mat-card-title>
+                <app-shared-header-crud title="Gestione Appuntamenti" addButtonText="Aggiungi appuntamento"
+                    (add)="addNewRow()">
+                </app-shared-header-crud>
+            </mat-card-title>
+            <mat-card-content>
+                <div class="d-flex justify-content-center" *ngIf="isLoadingTable$ | async">
+                    <mat-spinner></mat-spinner>
+                </div>
+                <app-appointment-list *ngIf="!(isLoadingTable$ | async)" [tableContent]="appointments$"
+                    [tableColumns]="columns" (rowSelectEmitter)="setCurrentObject($event)">
+                </app-appointment-list>
+            </mat-card-content>
+        </mat-card>
+    </as-split-area>
+
+    <as-split-area [size]="50" *ngIf="showForm$ | async">
+        <app-appointment-form [currentAppointmentRow]="currentRowObject | async"></app-appointment-form>
+    </as-split-area>
+</as-split>

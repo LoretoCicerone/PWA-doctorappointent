@@ -7,7 +7,7 @@
             </mat-card-title>
             <mat-card-content>
                 <div class="d-flex justify-content-center">
-                <mat-spinner *ngIf="isLoadingTable$ | async"></mat-spinner>
+                    <mat-spinner *ngIf="isLoadingTable$ | async"></mat-spinner>
                 </div>
                 <app-shared-table-crud *ngIf="!(isLoadingTable$ | async)" [tableContent]="patients$"
                     [isFilterable]="true" [isPageable]="true" [tableColumns]="columns"

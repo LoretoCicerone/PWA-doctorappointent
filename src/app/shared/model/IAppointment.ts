@@ -1,5 +1,5 @@
-import { IDoctor } from "../../doctor/model/IDoctor";
-import { IPatient } from "../../patient/model/IPatient";
+import { IDoctor } from "../../admin/features/doctor/model/IDoctor";
+import { IPatient } from "../../admin/features/patient/model/IPatient";
 
 export interface IAppointment{
     id: string;

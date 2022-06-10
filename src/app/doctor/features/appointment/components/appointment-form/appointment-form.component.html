@@ -1,0 +1,47 @@
+<form [formGroup]="appointmentForm">
+    <div class="card">
+        <div class="card-header">
+            <app-shared-form-actions [isFormInvalid]="appointmentForm.invalid"></app-shared-form-actions>
+        </div>
+        <div class="card-body">
+            <fieldset>
+                <div class="row">
+                    <div class="mb-3">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Data</mat-label>
+                            <input matInput [matDatepicker]="picker" formControlName="appointmentDate">
+                            <mat-hint>DD/MM/YYYY</mat-hint>
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="mb-3">
+                        <mat-form-field class="example-full-width" style="width: 100%;" appearance="fill">
+                            <mat-label>Ora</mat-label>
+                            <input type="text" matInput formControlName="appointmentTime">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <br>
+                <!-- <div class="row">
+                    <div class="mb-3">
+                        <mat-form-field class="example-full-width" style="width: 100%;" appearance="fill">
+                            <mat-label>Nome paziente</mat-label>
+                            <input type="text" matInput formControlName="patientName">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="mb-3">
+                        <mat-form-field class="example-full-width" style="width: 100%;" appearance="fill">
+                            <mat-label>Email paziente</mat-label>
+                            <input type="text" matInput formControlName="patientEmail">
+                        </mat-form-field>
+                    </div>
+                </div> -->
+            </fieldset>
+        </div>
+    </div>
+</form>

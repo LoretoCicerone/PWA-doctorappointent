@@ -7,7 +7,7 @@
             </mat-card-title>
             <mat-card-content>
                 <div class="d-flex justify-content-center" *ngIf="isLoadingTable$ | async">
-                    <mat-spinner ></mat-spinner>
+                    <mat-spinner></mat-spinner>
                 </div>
                 <app-shared-table-crud *ngIf="!(isLoadingTable$ | async)" [tableContent]="doctors$"
                     [tableColumns]="columns" (rowSelectEmitter)="setCurrentObject($event)">
