@@ -18,29 +18,21 @@
                 </div>
                 <div class="row">
                     <div class="mb-3">
-                        <mat-form-field class="example-full-width" style="width: 100%;" appearance="fill">
-                            <mat-label>Ora</mat-label>
-                            <input type="text" matInput formControlName="appointmentTime">
-                        </mat-form-field>
+                        <!-- <mat-form-field appearance="fill">
+                            <mat-label>Ora inizio ricevimento</mat-label> -->
+                            <ngb-timepicker formControlName="startHour"></ngb-timepicker>
+                        <!-- </mat-form-field> -->
                     </div>
                 </div>
                 <br>
-                <!-- <div class="row">
-                    <div class="mb-3">
-                        <mat-form-field class="example-full-width" style="width: 100%;" appearance="fill">
-                            <mat-label>Nome paziente</mat-label>
-                            <input type="text" matInput formControlName="patientName">
-                        </mat-form-field>
-                    </div>
-                </div>
                 <div class="row">
                     <div class="mb-3">
-                        <mat-form-field class="example-full-width" style="width: 100%;" appearance="fill">
-                            <mat-label>Email paziente</mat-label>
-                            <input type="text" matInput formControlName="patientEmail">
-                        </mat-form-field>
+                        <!-- <mat-form-field appearance="fill">
+                            <mat-label>Fine ricevimento</mat-label> -->
+                            <ngb-timepicker formControlName="endHour"></ngb-timepicker>
+                        <!-- </mat-form-field> -->
                     </div>
-                </div> -->
+                </div>
             </fieldset>
         </div>
     </div>

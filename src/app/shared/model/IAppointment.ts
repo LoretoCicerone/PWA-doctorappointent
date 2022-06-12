@@ -4,7 +4,12 @@ import { IPatient } from "../../admin/features/patient/model/IPatient";
 export interface IAppointment{
     id: string;
     appointmentDate : Date;
-    appointmentTime: string;
+    startHour: {
+        hour: string, minute: string
+    };
+    endHour: {
+        hour: string, minute: string
+    };
     patient: IPatient;
     doctorBooked: IDoctor;
 }

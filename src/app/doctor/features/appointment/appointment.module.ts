@@ -20,6 +20,8 @@ import * as fromAppointment from './store/appointment.reducer';
 import { StoreModule } from '@ngrx/store';
 import { AppointmentRoutingModule } from './appointment-routing.module';
 import { MatNativeDateModule } from '@angular/material/core';
+import { NgxMatDatetimePickerModule, NgxMatTimepickerModule } from '@angular-material-components/datetime-picker';
+import { NgbTimepickerModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppointmentComponent,
@@ -35,7 +37,10 @@ import { MatNativeDateModule } from '@angular/material/core';
     ReactiveFormsModule,
     SharedModule,
     MatTableModule,
+    NgxMatDatetimePickerModule,
+    NgxMatTimepickerModule,
     MatIconModule,
+    NgbTimepickerModule,
     MatNativeDateModule, 
     MatSortModule,
     MatPaginatorModule,

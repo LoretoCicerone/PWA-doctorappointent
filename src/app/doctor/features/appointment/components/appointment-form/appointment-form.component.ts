@@ -27,7 +27,8 @@ export class AppointmentFormComponent implements OnInit {
   buildGeneralForm(appointmentRow: IAppointment) {
     return this.formBuilder.group({
       appointmentDate: new FormControl(appointmentRow.appointmentDate, Validators.required),
-      appointmentTime: new FormControl(appointmentRow.appointmentTime, Validators.required),
+      startHour: new FormControl(appointmentRow.startHour, Validators.required),
+      endHour: new FormControl(appointmentRow.endHour, Validators.required),
       patientName: new FormControl(appointmentRow.patient.name, Validators.required),
       patientEmail: new FormControl(appointmentRow.patient.email, Validators.required)
     })
