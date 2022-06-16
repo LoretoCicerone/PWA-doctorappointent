@@ -5,10 +5,10 @@ export interface IAppointment{
     id: string;
     appointmentDate : Date;
     startHour: {
-        hour: string, minute: string
+        hour: number, minute: number
     };
     endHour: {
-        hour: string, minute: string
+        hour: number, minute: number
     };
     patient: IPatient;
     doctorBooked: IDoctor;

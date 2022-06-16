@@ -14,18 +14,21 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { AngularSplitModule } from 'angular-split';
+import { HeaderModule } from './common/header/header.module';
+import { MenuComponent } from './common/menu/menu.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     AngularSplitModule,
+    HeaderModule,
     NgbModule,
     StoreModule.forRoot({}, {}),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),

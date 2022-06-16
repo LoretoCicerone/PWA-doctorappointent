@@ -13,12 +13,12 @@ export class AppointmentApiService {
         id: '1',
         appointmentDate: new Date(2022, 6, 10),
         startHour: {
-          hour:'13',
-          minute:'30'
+          hour:13,
+          minute:30
         },
         endHour:{
-          hour:'13',
-          minute:'30'
+          hour:13,
+          minute:30
         },
         patient: {
           name: 'Tizio',
@@ -30,12 +30,12 @@ export class AppointmentApiService {
         id: '2',
         appointmentDate: new Date(2022, 6, 8),
         startHour: {
-          hour:'13',
-          minute:'30'
+          hour:13,
+          minute:30
         },
         endHour:{
-          hour:'13',
-          minute:'30'
+          hour:13,
+          minute:30
         },
         patient: {
           name: 'Tizio',
@@ -47,12 +47,12 @@ export class AppointmentApiService {
         id: '3',
         appointmentDate: new Date(2022, 6, 9),
         startHour: {
-          hour:'13',
-          minute:'30'
+          hour:13,
+          minute:30
         },
         endHour:{
-          hour:'13',
-          minute:'30'
+          hour:13,
+          minute:30
         },
         patient: {
           name: 'Tizio',

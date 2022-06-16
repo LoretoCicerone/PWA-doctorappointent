@@ -18,20 +18,24 @@
                 </div>
                 <div class="row">
                     <div class="mb-3">
-                        <!-- <mat-form-field appearance="fill">
-                            <mat-label>Ora inizio ricevimento</mat-label> -->
-                            <ngb-timepicker formControlName="startHour"></ngb-timepicker>
-                        <!-- </mat-form-field> -->
+                        <label for="startHour">
+                            <span> Ora Inizio </span>
+                        </label>
+                        <ngb-timepicker formControlName="startHour"></ngb-timepicker>
+
                     </div>
                 </div>
                 <br>
                 <div class="row">
                     <div class="mb-3">
-                        <!-- <mat-form-field appearance="fill">
-                            <mat-label>Fine ricevimento</mat-label> -->
-                            <ngb-timepicker formControlName="endHour"></ngb-timepicker>
-                        <!-- </mat-form-field> -->
+                        <label for="startHour">
+                            <span> Ora Fine </span>
+                        </label>
+                        <ngb-timepicker formControlName="endHour"></ngb-timepicker>
                     </div>
+                </div>
+                <div *ngIf="appointmentForm.errors?.wrongHours">
+                    <span class="caption-form">Selezionare due orari validi</span>
                 </div>
             </fieldset>
         </div>

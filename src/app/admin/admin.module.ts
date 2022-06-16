@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { AdminComponent } from './admin.component';
 import { AdminRoutingModule } from './admin-routing.module';
 import { RouterModule, Routes } from '@angular/router';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list'
 
 
 const routes: Routes = [{
@@ -18,7 +20,8 @@ const routes: Routes = [{
     CommonModule,
     RouterModule.forChild(routes),
     AdminRoutingModule,
-   
+    MatSidenavModule,
+    MatListModule
   ]
 })
 export class AdminModule { }

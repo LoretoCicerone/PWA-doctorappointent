@@ -6,18 +6,20 @@ import { DoctorModule } from './doctor/doctor.module';
 import { DepartmentModule } from './department/department.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularSplitModule } from 'angular-split';
-
-
-
-@NgModule({
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatListModule} from '@angular/material/list'
+@NgModule({ 
   declarations: [
     FeaturesComponent
   ],
   imports: [
     CommonModule,
     FeaturesRoutingModule,
-    DoctorModule,
     AngularSplitModule,
+    MatDividerModule,
+    MatListModule,
+    MatSidenavModule,
     DepartmentModule
   ]
 })
