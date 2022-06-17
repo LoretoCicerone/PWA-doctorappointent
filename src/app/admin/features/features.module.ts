@@ -4,11 +4,11 @@ import { FeaturesComponent } from './features.component';
 import { FeaturesRoutingModule } from './features-routing.module';
 import { DoctorModule } from './doctor/doctor.module';
 import { DepartmentModule } from './department/department.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AngularSplitModule } from 'angular-split';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list'
+import { MatIconModule } from '@angular/material/icon';
+import { PatientModule } from './patient/patient.module';
 @NgModule({ 
   declarations: [
     FeaturesComponent
@@ -16,11 +16,13 @@ import {MatListModule} from '@angular/material/list'
   imports: [
     CommonModule,
     FeaturesRoutingModule,
-    AngularSplitModule,
     MatDividerModule,
+    MatIconModule,
     MatListModule,
     MatSidenavModule,
-    DepartmentModule
+    DepartmentModule,
+    DoctorModule,
+    PatientModule
   ]
 })
 export class FeaturesModule { }

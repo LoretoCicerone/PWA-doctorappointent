@@ -30,6 +30,7 @@
     "@popperjs/core": "^2.10.2",
     "angular-moment-picker": "^0.10.2",
     "angular-split": "^13.2.0",
+    "angular-svg-icon": "^13.0.0",
     "bootstrap": "^5.2.0-beta1",
     "bootstrap-icons": "^1.8.3",
     "ng-bootstrap-icons": "^13.1.2-canary.1",

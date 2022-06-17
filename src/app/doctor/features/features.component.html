@@ -1,1 +1,30 @@
-<router-outlet></router-outlet>
+<mat-drawer-container style="width: 100%; height:100%;">
+    <mat-drawer class="bg-light" mode="side" opened>
+        <mat-list class="nav nav-pills flex-column mb-auto">
+
+            <mat-list-item class="nav-item">
+                <a class="nav-link" aria-current="page" routerLink="./appointments">
+                    <mat-icon aria-hidden="false">assignment_ind</mat-icon>
+                    <span>Appointments</span>
+                </a>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+                <a class="nav-link" aria-current="page" routerLink="./prescriptions">
+                    <mat-icon> inbox</mat-icon>Prescriptions
+                </a>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item class="nav-item">
+                <a class="nav-link" aria-current="page" routerLink="./appointments">
+                    <mat-icon>calendar_today</mat-icon>
+                    Appointments
+                </a>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+        </mat-list>
+    </mat-drawer>
+    <mat-drawer-content>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>

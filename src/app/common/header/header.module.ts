@@ -4,7 +4,7 @@ import { HeaderComponent } from './header.component';
 import { HeaderRoutingModule } from './header-routing.module';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTabsModule } from '@angular/material/tabs';
-
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 
 @NgModule({
@@ -13,6 +13,7 @@ import { MatTabsModule } from '@angular/material/tabs';
     CommonModule,
     HeaderRoutingModule,
     MatSidenavModule,
+    MatToolbarModule,
     MatTabsModule
   ],
   exports:[HeaderComponent]

@@ -20,8 +20,6 @@ const routes: Routes = [{
     CommonModule,
     RouterModule.forChild(routes),
     AdminRoutingModule,
-    MatSidenavModule,
-    MatListModule
   ]
 })
 export class AdminModule { }

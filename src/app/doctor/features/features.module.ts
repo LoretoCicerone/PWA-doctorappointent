@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FeaturesComponent } from './features.component';
-import { DoctorModule } from 'src/app/admin/features/doctor/doctor.module';
 import { FeaturesRoutingModule } from './features-routing.module';
 import { SharedModule } from 'shared';
-import { AppointmentModule } from 'src/app/admin/features/appointment/appointment.module';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { PrescriptionModule } from './prescription/prescription.module';
+import { AppointmentModule } from './appointment/appointment.module';
 
 
 
@@ -14,10 +18,15 @@ import { AppointmentModule } from 'src/app/admin/features/appointment/appointmen
   ],
   imports: [
     CommonModule,
-    DoctorModule,
+    FeaturesRoutingModule,
+    MatDividerModule,
+    MatIconModule,
+    MatListModule,
+    MatSidenavModule,
     SharedModule,
+    PrescriptionModule,
     AppointmentModule,
-    FeaturesRoutingModule
+    
   ]
 })
 export class FeaturesModule { }
