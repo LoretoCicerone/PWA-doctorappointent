@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [{
-  path:'admin',
-  loadChildren: ()=> import('../../admin/admin.module').then(m=>m.AdminModule)
+  path:'login',
+  loadChildren: ()=> import('../../auth/login/login.module').then(m=>m.LoginModule)
 },
 {
-  path:'doctor',
-  loadChildren: ()=> import('../../doctor/doctors.module').then(m=>m.DoctorsModule)
+  path:'register',
+  loadChildren: ()=> import('../../auth/register/register.module').then(m=>m.RegisterModule)
 },
 ];
 

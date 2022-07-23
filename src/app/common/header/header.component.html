@@ -1,33 +1,15 @@
-<mat-toolbar class="navbar bg-primary navbar-expand-lg">
-    <span style="font-style: white">DoctorBooking</span>
+<mat-toolbar color="primary">
+    <span>DoctorBooking</span>
     <span class="spacer"></span>
-    <!-- <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">DoctorBooking</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/admin">Admin</a>
-                </li>
-                <li class="nav-item dropdown">
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/doctor">Doctor</a>
-                </li>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-            </ul>
-        </div>
-    </div> -->
+    <div class="mr-3">
+    <a mat-button aria-current="page" routerLink="./login">
+        Login
+    </a>
+    </div>
+    <div class="ml-3">
+    <a mat-button aria-current="page" routerLink="./register">
+        Register
+    </a>
+</div>
 </mat-toolbar>
 <router-outlet></router-outlet>

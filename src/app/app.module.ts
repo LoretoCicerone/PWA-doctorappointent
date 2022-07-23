@@ -5,29 +5,27 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CommonModule } from '@angular/common';
-import { HeaderComponent } from './common/header/header.component';
-import { AdminComponent } from './admin/admin.component';
-import { AdminModule } from './admin/admin.module';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { AngularSplitModule } from 'angular-split';
 import { HeaderModule } from './common/header/header.module';
-import { MenuComponent } from './common/menu/menu.component';
+import { HomeComponent } from './common/home/home.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     AngularSplitModule,
+    MatToolbarModule,
     HeaderModule,
     NgbModule,
     StoreModule.forRoot({}, {}),
