@@ -10,8 +10,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { AngularSplitModule } from 'angular-split';
-import { HeaderModule } from './common/header/header.module';
-import { HomeComponent } from './common/home/home.component';
+import { HeaderModule } from './shared/header/header.module';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 

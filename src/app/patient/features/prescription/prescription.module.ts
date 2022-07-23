@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { PrescriptionTableComponent } from './components/prescription-table/prescription-table.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    PrescriptionTableComponent
+  ],
   imports: [
     CommonModule
   ]
