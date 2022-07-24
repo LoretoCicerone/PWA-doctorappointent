@@ -1,0 +1,12 @@
+{
+    "register": {
+        "name": "Name",
+        "surname": "Surname"
+    },
+    "home": {
+        "header": "Create an account & Book your appointment"
+    },
+    "admin": {
+        "department": "Department"
+    }
+}

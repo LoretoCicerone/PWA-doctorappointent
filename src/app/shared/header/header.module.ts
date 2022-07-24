@@ -5,6 +5,8 @@ import { HeaderRoutingModule } from './header-routing.module';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTabsModule } from '@angular/material/tabs';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
 
 
 @NgModule({
@@ -14,6 +16,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     HeaderRoutingModule,
     MatSidenavModule,
     MatToolbarModule,
+    MatFormFieldModule,
+    MatSelectModule,
     MatTabsModule
   ],
   exports:[HeaderComponent]

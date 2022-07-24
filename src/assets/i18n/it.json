@@ -1,0 +1,12 @@
+{
+    "register": {
+        "name": "Nome",
+        "surname": "Cognome"
+    }, 
+    "home":{
+        "header":"Crea un account e prenota il tuo appuntamento"
+    },
+    "admin":{
+        "department":"Dipartimento"
+    }
+}

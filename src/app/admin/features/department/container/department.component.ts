@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { DepartmentFacadeService } from '../department-facade.service';
 import { IDepartment } from '../model/IDepartment';
 
@@ -17,12 +18,12 @@ export class DepartmentComponent implements OnInit {
   columns: { name: string, dataKey: string, position?: 'right'|'left', display:string, isSortable:boolean }[];
 
 
-  constructor(private departmentFacade : DepartmentFacadeService) { }
+  constructor(private departmentFacade : DepartmentFacadeService, private translate: TranslateService) { }
 
   ngOnInit(): void {
     this.departmentFacade.loadDepartments();
     this.columns = [{
-      dataKey:'department',name:'Dipartimento', display:'table-cell', isSortable:true,
+      dataKey:'department',name:this.translate.instant('admin.department'), display:'table-cell', isSortable:true,
     }]
   }
 

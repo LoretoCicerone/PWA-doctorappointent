@@ -5,6 +5,7 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list'
+import { TranslateModule } from '@ngx-translate/core';
 
 
 const routes: Routes = [{
@@ -19,6 +20,7 @@ const routes: Routes = [{
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
+    TranslateModule,
     AdminRoutingModule,
   ]
 })

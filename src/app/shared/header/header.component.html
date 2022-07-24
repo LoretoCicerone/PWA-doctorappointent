@@ -1,15 +1,28 @@
 <mat-toolbar color="primary">
+
     <span>DoctorBooking</span>
+
+    <div class="d-flex justify-content-center">
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>Select</mat-label>
+                <mat-select (selectionChange)="languageChange($event)">
+                    <mat-option value="en">English</mat-option>
+                    <mat-option value="it">Italian</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
     <span class="spacer"></span>
     <div class="mr-3">
-    <a mat-button aria-current="page" routerLink="./login">
-        Login
-    </a>
+        <a mat-button aria-current="page" routerLink="./login">
+            Login
+        </a>
     </div>
     <div class="ml-3">
-    <a mat-button aria-current="page" routerLink="./register">
-        Register
-    </a>
-</div>
+        <a mat-button aria-current="page" routerLink="./register">
+            Register
+        </a>
+    </div>
 </mat-toolbar>
 <router-outlet></router-outlet>
