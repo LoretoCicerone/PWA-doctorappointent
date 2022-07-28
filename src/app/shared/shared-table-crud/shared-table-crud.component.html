@@ -26,13 +26,13 @@
       <ng-container *ngIf="tableColumn.isSortable; else notSortable">
         <th mat-header-cell *matHeaderCellDef [mat-sort-header]="tableColumn.name"
           [arrowPosition]="tableColumn.position === 'right' ? 'before' : 'after'">
-          {{tableColumn.name}}
+          {{tableColumn.name | translate}}
         </th>
       </ng-container>
       <!-- else not sortable -->
       <ng-template #notSortable>
         <th mat-header-cell *matHeaderCellDef [class.text-right]="tableColumn.position == 'right'">
-          {{tableColumn.name}}
+          {{tableColumn.name | translate}}
         </th>
       </ng-template>
 

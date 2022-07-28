@@ -13,6 +13,7 @@ import { AngularSplitModule } from 'angular-split';
 import {MatCardModule} from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatInputModule } from '@angular/material/input';
+import { TranslateModule } from '@ngx-translate/core';
 @NgModule({
   declarations: [
     DoctorFormComponent,
@@ -26,6 +27,7 @@ import { MatInputModule } from '@angular/material/input';
     MatCardModule,
     MatInputModule,
     MatProgressSpinnerModule,
+    TranslateModule,
     ReactiveFormsModule,
     DoctorRoutingModule,
     StoreModule.forFeature(fromDoctors.doctorFeatureKey, fromDoctors.reducer),

@@ -4,27 +4,27 @@
 
       <mat-list-item class="nav-item">
         <a class="nav-link" aria-current="page" routerLink="./doctors">
-          <mat-icon aria-hidden="false">assignment_ind</mat-icon>Doctors
+          <mat-icon aria-hidden="false">assignment_ind</mat-icon>{{ 'adminMenu.doctors' | translate }}
         </a>
       </mat-list-item>
       <mat-divider></mat-divider>
       <mat-list-item>
         <a class="nav-link" aria-current="page" routerLink="./departments">
-          <mat-icon> local_hospital</mat-icon>Departments
+          <mat-icon> local_hospital</mat-icon>{{ 'adminMenu.departments' | translate }}
         </a>
       </mat-list-item>
       <mat-divider></mat-divider>
       <mat-list-item class="nav-item">
         <a class="nav-link" aria-current="page" routerLink="./appointments">
           <mat-icon>calendar_today</mat-icon>
-          Appointments
+          {{ 'adminMenu.appointments' | translate }}
         </a>
       </mat-list-item>
       <mat-divider></mat-divider>
       <mat-list-item class="nav-item">
         <a class="nav-link" aria-current="page" routerLink="./patients">
           <mat-icon>perm_identity</mat-icon>
-          Patients
+          {{ 'adminMenu.patients' | translate }}
         </a>
       </mat-list-item>
       <mat-divider></mat-divider>

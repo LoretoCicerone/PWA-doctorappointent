@@ -21,11 +21,11 @@ export class PrescriptionComponent implements OnInit {
   ngOnInit(): void {
     this.prescriptionFacade.loadPrescriptions();
     this.columns = [
-    {dataKey:'patient',name:'Paziente', display:'table-cell', isSortable:true},
-    {dataKey:'pathology',name:'Patologia', display:'table-cell', isSortable:true},
-    {dataKey:'symptoms',name:'Sintomi', display:'table-cell', isSortable:true},
-    {dataKey:'medicicePrescripted',name:'Medicine prescritte', display:'table-cell', isSortable:true},
-    {dataKey:'procedure',name:'Procedura', display:'table-cell', isSortable:true},
+    {dataKey:'patient',name:'doctor.patient', display:'table-cell', isSortable:true},
+    {dataKey:'pathology',name:'doctor.pathology', display:'table-cell', isSortable:true},
+    {dataKey:'symptoms',name:'doctor.sympthoms', display:'table-cell', isSortable:true},
+    {dataKey:'medicicePrescripted',name:'doctor.medicine', display:'table-cell', isSortable:true},
+    {dataKey:'procedure',name:'doctor.procedure', display:'table-cell', isSortable:true},
     {dataKey:'feedback',name:'Feedback', display:'table-cell', isSortable:true}]
   }
 

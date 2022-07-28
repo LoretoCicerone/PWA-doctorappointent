@@ -20,9 +20,9 @@ export class AppointmentComponent implements OnInit {
   ngOnInit(): void {
     this.appointmentFacade.loadAppointments();
     this.columns = [
-      { dataKey: 'appointmentDate', name: 'Data', display: 'table-cell', isSortable: true },
-      { dataKey: 'appointmentTime', name: 'Ora', display: 'table-cell', isSortable: true },
-      { dataKey: 'patient', name: 'Paziente', display: 'table-cell', isSortable: true }
+      { dataKey: 'appointmentDate', name: 'doctor.date', display: 'table-cell', isSortable: true },
+      { dataKey: 'appointmentTime', name: 'doctor.hour', display: 'table-cell', isSortable: true },
+      { dataKey: 'patient', name: 'doctor.patient', display: 'table-cell', isSortable: true }
     ]
     
   }

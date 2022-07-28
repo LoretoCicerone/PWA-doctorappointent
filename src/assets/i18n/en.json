@@ -6,7 +6,36 @@
     "home": {
         "header": "Create an account & Book your appointment"
     },
-    "admin": {
-        "department": "Department"
+    "adminMenu":{
+        "doctors":"Doctors",
+        "departments":"Departments",
+        "appointments":"Appointments",
+        "patients":"Patients"
+    },
+    "admin":{
+        "department":"Department",
+        "departmentName":"Department name",
+        "doctorName":"Name",
+        "doctorAddress":"Address",
+        "doctorNumber":"Phone number",
+        "doctorDepartment":"Department",
+        "doctorEducation":"Education"
+    },
+    "patient":{
+        "prescriptions":"Your prescriptions",
+        "name":"Name",
+        "gender":"Gender",
+        "phoneNumber":"Phone Number"
+    },
+    "doctor":{
+        "date":"Date",
+        "hour":"Hour",
+        "startHour":"Start hour",
+        "endHour":"End hour",
+        "patient":"Patient",
+        "pathology":"Patology",
+        "medicine":"Medicine",
+        "procedure":"Procedure"
     }
+
 }

@@ -11,8 +11,9 @@ import { EffectsModule } from '@ngrx/effects';
 import { DepartmentEffects } from './store/department.effects';
 import { StoreModule } from '@ngrx/store';
 import { MatCardModule } from '@angular/material/card';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import {MatInputModule} from '@angular/material/input';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatInputModule } from '@angular/material/input';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import {MatInputModule} from '@angular/material/input';
     MatInputModule,
     ReactiveFormsModule,
     FormsModule,
+    TranslateModule,
     MatProgressSpinnerModule,
     MatCardModule,
     AngularSplitModule,

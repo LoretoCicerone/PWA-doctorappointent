@@ -21,16 +21,16 @@ export class PatientComponent implements OnInit {
     this.patientFacade.loadPatients();
     this.columns = [
       {
-        dataKey: 'name', name: 'Nome', display: 'table-cell', isSortable: true,
+        dataKey: 'name', name: 'patient.name', display: 'table-cell', isSortable: true,
       },
       {
         dataKey: 'email', name: 'Email', display: 'table-cell', isSortable: true,
       },
       {
-        dataKey: 'gender', name: 'Sesso', display: 'table-cell', isSortable: true,
+        dataKey: 'gender', name: 'patient.gender', display: 'table-cell', isSortable: true,
       },
       {
-        dataKey: 'phone_number', name: 'Numero di telefono', display: 'table-cell', isSortable: true,
+        dataKey: 'phone_number', name: 'patient.phoneNumber', display: 'table-cell', isSortable: true,
       },
 
     ]

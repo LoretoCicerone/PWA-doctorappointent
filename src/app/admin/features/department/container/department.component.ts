@@ -15,19 +15,19 @@ export class DepartmentComponent implements OnInit {
   showForm$ = this.departmentFacade.showForm$;
   currentRowObject = this.departmentFacade.currentRowObject$;
 
-  columns: { name: string, dataKey: string, position?: 'right'|'left', display:string, isSortable:boolean }[];
+  columns: { name: string, dataKey: string, position?: 'right' | 'left', display: string, isSortable: boolean }[];
 
 
-  constructor(private departmentFacade : DepartmentFacadeService, private translate: TranslateService) { }
+  constructor(private departmentFacade: DepartmentFacadeService, private translate: TranslateService) { }
 
   ngOnInit(): void {
     this.departmentFacade.loadDepartments();
     this.columns = [{
-      dataKey:'department',name:this.translate.instant('admin.department'), display:'table-cell', isSortable:true,
+      dataKey: 'department', name: 'admin.department', display: 'table-cell', isSortable: true,
     }]
   }
 
-  setCurrentObject(department: IDepartment){
+  setCurrentObject(department: IDepartment) {
     this.departmentFacade.setCurrentObject(department);
   }
 

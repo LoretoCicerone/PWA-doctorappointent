@@ -22,12 +22,12 @@ export class DoctorComponent implements OnInit {
   ngOnInit(): void {
     this.doctorFacade.loadDoctors();
     this.columns = [
-      { dataKey: 'name', name: 'Nome', display: 'table-cell', isSortable: true },
+      { dataKey: 'name', name: 'admin.doctorName', display: 'table-cell', isSortable: true },
       { dataKey: 'email', name: 'Email', display: 'table-cell', isSortable: true },
-      { dataKey: 'phone_number', name: 'Numero di telefono', display: 'table-cell', isSortable: true },
-      { dataKey: 'address', name: 'Indirizzo', display: 'table-cell', isSortable: true },
-      { dataKey: 'department', name: 'Dipartimento', display: 'table-cell', isSortable: true },
-      { dataKey: 'education', name: 'Titolo di studio', display: 'table-cell', isSortable: true },
+      { dataKey: 'phone_number', name: 'admin.doctorNumber', display: 'table-cell', isSortable: true },
+      { dataKey: 'address', name: 'admin.doctorAddress', display: 'table-cell', isSortable: true },
+      { dataKey: 'department', name: 'admin.doctorDepartment', display: 'table-cell', isSortable: true },
+      { dataKey: 'education', name: 'admin.doctorEducation', display: 'table-cell', isSortable: true },
     ]
     this.currentRowObject = this.doctorFacade.currentRowObject$.pipe(map((doctor) => doctor ? doctor : this.addNewRow()));
   }

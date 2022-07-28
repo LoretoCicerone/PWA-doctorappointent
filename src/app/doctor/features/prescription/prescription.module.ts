@@ -14,6 +14,7 @@ import { AngularSplitModule } from 'angular-split';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatInputModule } from '@angular/material/input';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { MatInputModule } from '@angular/material/input';
     FormsModule,
     AngularSplitModule,
     MatInputModule,
+    TranslateModule,
     SharedModule,
     MatProgressSpinnerModule,
     MatCardModule,

@@ -8,7 +8,7 @@
                 <div class="row">
                     <div class="mb-3">
                         <mat-form-field appearance="fill">
-                            <mat-label>Data</mat-label>
+                            <mat-label>{{ 'doctor.date' | translate }}</mat-label>
                             <input matInput [matDatepicker]="picker" formControlName="appointmentDate">
                             <mat-hint>DD/MM/YYYY</mat-hint>
                             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
@@ -19,7 +19,7 @@
                 <div class="row">
                     <div class="mb-3">
                         <label for="startHour">
-                            <span> Ora Inizio </span>
+                            <span> {{ 'doctor.startHour' | translate }} </span>
                         </label>
                         <ngb-timepicker formControlName="startHour"></ngb-timepicker>
 
@@ -29,7 +29,7 @@
                 <div class="row">
                     <div class="mb-3">
                         <label for="startHour">
-                            <span> Ora Fine </span>
+                            <span> {{ 'doctor.endHour' | translate }} </span>
                         </label>
                         <ngb-timepicker formControlName="endHour"></ngb-timepicker>
                     </div>

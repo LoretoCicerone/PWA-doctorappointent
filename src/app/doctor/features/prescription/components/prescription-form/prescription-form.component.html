@@ -8,7 +8,7 @@
                 <div class="row">
                     <div class="mb-3">
                         <mat-form-field class="example-full-width" style="width: 100%;" appearance="fill">
-                            <mat-label>Nome paziente</mat-label>
+                            <mat-label>{{ 'doctor.patient' | translate }}</mat-label>
                             <input type="text" matInput formControlName="patient">
                         </mat-form-field>
                     </div>
@@ -24,7 +24,7 @@
                 <div class="row">
                     <div class="mb-3">
                         <mat-form-field class="example-full-width" style="width: 100%;" appearance="fill">
-                            <mat-label>Patologia</mat-label>
+                            <mat-label>{{ 'doctor.pathology' | translate }}</mat-label>
                             <input type="text" matInput formControlName="pathology">
                         </mat-form-field>
                     </div>
@@ -40,7 +40,7 @@
                 <div class="row">
                     <div class="mb-3">
                         <mat-form-field class="example-full-width" style="width: 100%;" appearance="fill">
-                            <mat-label>Medicine </mat-label>
+                            <mat-label>{{ 'doctor.medicine' | translate }} </mat-label>
                             <textarea matInput formControlName="medicine"> </textarea>
                         </mat-form-field>
                     </div>
@@ -48,7 +48,7 @@
                 <div class="row">
                     <div class="mb-3">
                         <mat-form-field class="example-full-width" style="width: 100%;" appearance="fill">
-                            <mat-label>Procedura di utilizzo</mat-label>
+                            <mat-label>{{ 'doctor.procedure' | translate }}</mat-label>
                             <textarea matInput formControlName="procedure"> </textarea>
                         </mat-form-field>
                     </div>

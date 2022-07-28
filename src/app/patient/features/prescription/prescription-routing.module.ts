@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule, Routes } from '@angular/router';
+import { PrescriptionsComponent } from './container/prescriptions.component';
 
 
-
+const routes: Routes = [{ path: '', component:  PrescriptionsComponent }]
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
 })
 export class PrescriptionRoutingModule { }

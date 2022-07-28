@@ -22,6 +22,7 @@ import { AppointmentRoutingModule } from './appointment-routing.module';
 import { MatNativeDateModule } from '@angular/material/core';
 import { NgxMatDatetimePickerModule, NgxMatTimepickerModule } from '@angular-material-components/datetime-picker';
 import { NgbTimepickerModule } from '@ng-bootstrap/ng-bootstrap';
+import { TranslateModule } from '@ngx-translate/core';
 @NgModule({
   declarations: [
     AppointmentComponent,
@@ -44,6 +45,7 @@ import { NgbTimepickerModule } from '@ng-bootstrap/ng-bootstrap';
     MatNativeDateModule, 
     MatSortModule,
     MatPaginatorModule,
+    TranslateModule,
     MatInputModule,
     MatDatepickerModule,
     MatProgressSpinnerModule,
