@@ -9,7 +9,7 @@ import { ThemePalette } from '@angular/material/core';
 export class FeaturesComponent implements OnInit {
 
   links = ['appointments', 'prescription', 'profile'];
-//  activeLink = this.links[0];
+ // activeLink = this.links[0];
   background: ThemePalette = undefined;
 
   constructor() { }

@@ -12,7 +12,7 @@ import { PrescriptionsComponent } from './container/prescriptions.component';
 
 @NgModule({
   declarations: [
-    PrescriptionTableComponent, PrescriptionsComponent
+    PrescriptionsComponent, PrescriptionTableComponent, 
   ],
   imports: [
     CommonModule,
@@ -21,7 +21,6 @@ import { PrescriptionsComponent } from './container/prescriptions.component';
     TranslateModule,
     PrescriptionRoutingModule,
     MatProgressSpinnerModule
-  ],
-  exports:[PrescriptionTableComponent]
+  ]
 })
 export class PrescriptionModule { }

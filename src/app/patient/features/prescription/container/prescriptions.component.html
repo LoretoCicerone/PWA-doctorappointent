@@ -1,1 +1,19 @@
-<!-- <app-prescriptions-table></app-prescriptions-table> -->
+<mat-card>
+    <mat-card-title>
+        <div class="d-flex justify-content-between pb-3 crud-card-header">
+            <div class="p-2">
+                <div class="d-flex align-items-center flex-row">
+                    <div class="p-2">
+                        <span class="crud-title">{{'patient.prescriptions' | translate}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card-title>
+    <mat-card-content>
+        <div class="d-flex justify-content-center">
+            <!-- <mat-spinner></mat-spinner> -->
+        </div>
+        <app-prescription-table> </app-prescription-table>
+    </mat-card-content>
+</mat-card>

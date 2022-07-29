@@ -8,6 +8,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class SharedHeaderCrudComponent implements OnInit {
 
   @Input() title: string;
+  @Input() showAddButton : boolean = true; 
   @Input() addButtonText: string;
   @Output('add') addEmitter = new EventEmitter<Event>();
   constructor() { }

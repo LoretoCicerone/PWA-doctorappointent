@@ -23,6 +23,7 @@
     },
     "patient":{
         "prescriptions":"Your prescriptions",
+        "appointments":"Your Appointments",
         "name":"Name",
         "gender":"Gender",
         "phoneNumber":"Phone Number"

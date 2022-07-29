@@ -14,7 +14,7 @@
 
   <div class="p-2">
     <div class="input-group">
-      <button mat-raised-button color="primary" (click)="add($event)">
+      <button *ngIf="addButtonText !== undefined" mat-raised-button color="primary" (click)="add($event)">
         <mat-icon>add</mat-icon>
         {{addButtonText}}
       </button>

@@ -27,6 +27,7 @@
     },
     "patient":{
         "prescriptions":"Le tue prescrizioni",
+        "appointments":"I tuoi appuntamenti",
         "name":"Nome",
         "gender":"Sesso",
         "phoneNumber":"Numero di telefono"
